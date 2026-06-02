@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTempo</title>
+    <style>
+      :root { color-scheme: dark; }
+      body {
+        margin: 0; width: 260px;
+        font-family: 'YouTube Sans', Roboto, Arial, sans-serif;
+        background: #141416; color: #fff; padding: 16px;
+      }
+      h1 { font-size: 15px; margin: 0 0 4px; }
+      p.sub { margin: 0 0 16px; font-size: 12px; color: #9aa; }
+      .field-label { font-size: 12px; color: #cfcfd6; margin-bottom: 8px; }
+      .opts { display: flex; gap: 8px; }
+      .opt {
+        flex: 1; text-align: center; cursor: pointer;
+        padding: 10px 0; border-radius: 10px; background: #2b2b30;
+        font-size: 14px; font-weight: 700; user-select: none;
+        border: 2px solid transparent; transition: all .12s ease;
+      }
+      .opt:hover { background: #3a3a42; }
+      .opt.active { background: #ff0033; border-color: #ff3357; }
+      .opt span { display: block; font-size: 10px; font-weight: 500; color: #ffd; opacity: .8; }
+      footer { margin-top: 16px; font-size: 11px; color: #777; line-height: 1.5; }
+    </style>
+  </head>
+  <body>
+    <h1>🎸 YouTempo</h1>
+    <p class="sub">Ambiente di studio musicale per YouTube</p>
+
+    <div class="field-label">Durata Count-in</div>
+    <div class="opts" id="countin-opts"></div>
+
+    <footer>
+      Loop A-B, marker e count-in si controllano dalla barra in basso sul video.
+    </footer>
+
+    <script type="module" src="./popup.ts"></script>
+  </body>
+</html>
